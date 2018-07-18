@@ -1,0 +1,13 @@
+<div class="title">Register</div>
+
+<%= form_for @user, :url => account_path do |f| %>
+    <% if @user.errors.any? %>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+          <% end %>
+        </ul>
+    <% end %>
+    <%= render :partial => "form", :object => f %>
+    <%= f.submit "Register" %>
+<% end %>

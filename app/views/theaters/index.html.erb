@@ -1,0 +1,29 @@
+<div class="title">Local Theaters</div>
+<br/>
+<div id="theaters_accordion">
+  <% theater_index = 1
+     @theaters.each do |theater| %>
+      <h3 id="<%= 'theater_heading_'+theater_index.to_s %>">
+        <a href="#" class="accordion_heading"><%=  theater.name %></a>
+      </h3>
+      <div>
+        <%= link_to 'Click for Showtimes', theater_showtimes_path(theater),
+            :class => 'showtime_link', :id => 'theater_showtimes_'+theater_index.to_s
+        %>
+        <hr/>
+        <div class="theater_now_playing">
+          <span style="color:#999999">Now playing</span><br/>
+            <% theater.movies.uniq.each do |movie| %>
+              <%= movie.name %><br/>
+            <% end %>
+        </div>
+        <div class="theater_info">
+          <%= theater.description %>
+        </div>
+        <div class="theater_location">
+          Zip Code <%= theater.zip %><br/><br/>
+        </div>
+      </div>
+  <% theater_index += 1
+     end %>
+</div>

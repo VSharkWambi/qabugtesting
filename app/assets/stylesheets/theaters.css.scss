@@ -1,0 +1,20 @@
+// Place all the styles related to the Theaters controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.theater_now_playing {
+  float: left;
+  border-right: 2px solid #333333;
+  padding: 0px 5px 0px 5px;
+}
+
+.theater_info {
+  float: left;
+  padding: 0px 5px 0px 5px;
+  width: 450px;
+}
+
+.theater_location {
+  float: right;
+  border-left: 2px solid #333333;
+  padding: 0px 5px 0px 5px;
+}

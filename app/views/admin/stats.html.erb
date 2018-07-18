@@ -1,0 +1,33 @@
+<div class="title">Sales Figures</div>
+
+<p>Sales by Movie</p>
+<table class="table">
+  <tr>
+    <th>Movie</th>
+    <th>Tickets Sold</th>
+    <th>Total Sales</th>
+  </tr>
+  <% @movie_sales_hash.keys.each do |movie_name| %>
+  <tr>
+    <td><%= movie_name %></td>
+    <td><%= @movie_tickets_sold_hash[movie_name] %></td>
+    <td><%= number_to_currency @movie_sales_hash[movie_name] %></td>
+  </tr>
+  <% end %>
+</table>
+
+<p>Sales by Theater</p>
+<table class="table">
+  <tr>
+    <th>Theater</th>
+    <th>Tickets Sold</th>
+    <th>Total Sales</th>
+  </tr>
+  <% @theater_sales_hash.keys.each do |theater_name| %>
+      <tr>
+        <td><%= theater_name %></td>
+        <td><%= @theater_tickets_sold_hash[theater_name] %></td>
+        <td><%= number_to_currency @theater_sales_hash[theater_name] %></td>
+      </tr>
+  <% end %>
+</table>

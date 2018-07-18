@@ -1,0 +1,14 @@
+<div class="title"><%= @theater.name %></div>
+
+<b>Now Playing:</b>
+<ul>
+  <% @theater.movies.uniq.each do |movie| %>
+  <li><%= link_to movie.name, movie_path(movie) %></li>
+  <% end %>
+</ul>
+<div class="description ui-corner-all">
+  <%= @theater.description %>
+</div>
+<b>Zip Code: </b><%= @theater.zip %><br/>
+<br/>
+<%= link_to 'View Showtimes', theater_showtimes_path(@theater) %>

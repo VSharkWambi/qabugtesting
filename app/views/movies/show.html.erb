@@ -1,0 +1,10 @@
+<div class="title"><%= @movie.name %></div>
+
+<b>Synopsis:</b>
+<div class="description ui-corner-all">
+  <%= @movie.description %>
+</div>
+<b>Running time: </b><%= @movie.running_time %>min<br/>
+<b>Rating: </b><span class="gold"><% (0..@movie.rating.to_i).each do %>*<% end %></span><br/>
+<br/>
+<%= link_to 'View Showtimes', movie_showtimes_path(@movie) %>

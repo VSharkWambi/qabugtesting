@@ -1,0 +1,181 @@
+body {
+  background-color: black; /*#262626*/
+  color: #dddddd;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  background-color: #000000;
+  background-image: url('movietix_header_img.jpg');
+  background-repeat: no-repeat;
+  border-bottom: 1px solid orange;
+  height: 100px;
+  margin: 0px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: orange;
+  text-decoration: none;
+  &:visited {
+    color: #aaaaaa;
+  }
+  &:hover {
+    color: #ffffaa;
+  }
+}
+
+ul {
+  list-style-type: none; /*square, circle, disc*/
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+#content {
+  position: absolute;
+  left: 0px;
+  width: 800px;
+  padding: 10px;
+  margin: 0px;
+  border-right: 1px;
+  border-style: solid;
+  border-color: #222222;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.title {
+  height: 42px;
+  line-height: 42px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Times, serif;
+  color: #ffeebb;
+  border-width: 0px;
+  border-top: 1px;
+  border-style: dashed;
+  border-color: #aaddff; /*#dabeaa*/
+  margin: 0px;
+  padding: 0px 0px 0px 5px;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+.login_container {
+  position:absolute;
+  right: 25px;
+  top: 15px;
+  width: 250px;
+  height: 53px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ddcf2f;
+  padding: 6px 10px 6px 10px;
+  text-align: right;
+}
+.table th {
+  padding: 8px;
+  font-size: 16px;
+}
+
+.table {
+  border-width: 1px;
+  border-style: solid;
+  border-color: orange;
+  width: 100%;
+}
+
+td {
+  font-weight: bold;
+  height: 24px;
+  padding: 2px;
+}
+
+.hover_row {
+  border-top-color: #aaccff;
+  border-bottom-color: #aaccff;
+}
+
+.form_container {
+  background-color: #333333;
+  border: 1px solid;
+  margin: 5px;
+  padding: 5px;
+}
+
+.flash {
+  color: #88aadd
+}
+
+.movie_name_cell a, .theater_name_cell a {
+  color: white;
+  text-decoration: none;
+  &:visited {
+    color: white;
+  }
+  &:hover {
+    color: #ffffaa;
+  }
+}
+
+.description {
+  border: 1px solid orange;
+  padding: 3px;
+  margin: 3px;
+}
+
+.gold {
+  color: gold;
+}
+
+.info {
+  color: #ffaa33;
+}

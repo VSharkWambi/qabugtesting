@@ -1,0 +1,30 @@
+<div class="title">
+  <% if !current_user then %>
+    Showtime info
+  <% else %>
+    Purchase tickets
+  <% end %>
+</div>
+
+<p>
+  <b>Movie:</b>
+  <span style="color: orange;"><%= @movie.name %></span>
+</p>
+
+<p>
+  <b>Playing at </b><span style="color: orange;"><%= @theater.name %></span>
+  at <span style="color: orange;"><%= @showtime.time %> p.m.</span>
+</p>
+
+<p>
+  <% if @showtime.seats_available > 0 then %>
+  <b>Tix available</b>
+    <% if !current_user then %>
+      <%= link_to 'Log in to buy tix', login_url %>
+    <% else %>
+      <%= link_to 'Buy Tix', buy_tix_path(@showtime), :class => 'button' %>
+    <% end %>
+  <% else %>
+  <b>Sold out</b>
+  <% end %>
+</p>

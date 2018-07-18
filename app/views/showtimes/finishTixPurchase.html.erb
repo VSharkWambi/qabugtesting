@@ -1,0 +1,18 @@
+<% if !@showtime.errors.blank? then %>
+  <div class="ui-state-error ui-corner-all">
+    <span class="ui-icon ui-icon-alert" style="float: left; margin-right: .3em;"></span>
+    <!-- msg is array of arrays, get first message in list of messages -->
+    <% @showtime.errors.messages.each do |msg| %>
+      <%= msg[1][0] %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="title">You got tix!</div>
+
+  <p>Thank you for your purchase!<br/>
+  <br/>
+  You have <span class="info"><%= @num_tix %></span> ticket<%= @num_tix.to_i > 1 ? 's' : '' %>
+  to <span class="info"><%= @movie.name %></span> at
+  <span class="info"><%= @showtime.time %> p.m.</span> at
+  <span class="info"><%= @theater.name %></span></p>
+<% end %>

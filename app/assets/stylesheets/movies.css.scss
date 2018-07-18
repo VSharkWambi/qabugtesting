@@ -1,0 +1,24 @@
+// Place all the styles related to the Movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.movie_now_playing {
+  float: left;
+  border-right: 2px solid #333333;
+  padding: 0px 5px 0px 5px;
+}
+
+.movie_synopsis {
+  float: left;
+  padding: 0px 5px 0px 5px;
+  width: 400px;
+}
+
+.movie_info {
+  float: right;
+  border-left: 2px solid #333333;
+  padding: 0px 5px 0px 5px;
+}
+
+.accordion_heading {
+  margin-left:15px;
+}

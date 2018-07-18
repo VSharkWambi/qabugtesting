@@ -1,15 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Movietix</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <title>Movietix</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <div class="login_container ui-corner-all ui-widget-content">
+    <% if !current_user %>
+      <%= link_to "Register", new_account_path %> <strong>|</strong>
+      <%= link_to "Log In", login_path %><br/>
+    <% else %>
+      <%= link_to "My Account", account_path %> |
+      <%= link_to "Logout", logout_path %><br/>
+      Welcome, <%= link_to @current_user.login, edit_account_path %><br/>
+    <% end %>
+    <span class="flash"><%= flash[:notice] %></span>
+  </div>
+</header>
+<div id="content" class="ui-widget-content">
+  <%= yield %>
+  <hr/>
+  Browse
+  <%= link_to 'Movies', movies_path %> |
+  <%= link_to 'Theaters', theaters_path %>
+</div>
+</body>
 </html>

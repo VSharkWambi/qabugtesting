@@ -1,0 +1,32 @@
+<div class="title">Now Playing</div>
+<br/>
+<div id="movies_accordion">
+  <% movie_index = 1;
+     @movies.each do |movie| %>
+      <h3 id="<%= 'movie_heading_'+movie_index.to_s %>">
+        <a href="#" class="accordion_heading"><%=  movie.name %></a>
+      </h3>
+      <div>
+        <%= link_to 'Click for Showtimes', movie_showtimes_path(movie),
+            :class => 'showtime_link', :id => 'movie_showtimes_'+movie_index.to_s
+        %>
+        <hr/>
+        <div class="movie_now_playing">
+          <span style="color:#999999">Now playing at:</span><br/>
+            <% movie.theaters.uniq.each do |theater| %>
+              <%= theater.name %><br/>
+            <% end %>
+          </ul>
+        </div>
+        <div class="movie_synopsis">
+          <%= movie.description %>
+        </div>
+        <div class="movie_info">
+          Running time: <%= movie.running_time %> min<br/>
+          Rating: <% (0..movie.rating.to_i).each do %>*<% end %>
+        </div>
+      </div>
+  <% movie_index += 1
+     end %>
+</div>
+<br/>
