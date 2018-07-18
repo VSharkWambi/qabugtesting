@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'ruby:2.5' }
+    docker { image 'ruby:2.5-alpine3.7' }
   }
   environment {
      APP_PORT = 3000
