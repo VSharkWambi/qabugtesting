@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Application') {
       steps {
-        sh 'apt-get update && apt-get install nodejs'
+        sh 'sudo apt-get update && apt-get install nodejs'
         sh 'bundle install'
         sh 'rake db:create'
         sh 'rake db:migrate'
