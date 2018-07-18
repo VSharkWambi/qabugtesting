@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'ruby:2.5-alpine3.7' }
+    docker { image 'ruby-node:2-6' }
   }
   environment {
      APP_PORT = 3000
@@ -10,7 +10,6 @@ pipeline {
   stages {
     stage('Application') {
       steps {
-        sh 'sudo apt-get update && apt-get install nodejs'
         sh 'bundle install'
         sh 'rake db:create'
         sh 'rake db:migrate'
