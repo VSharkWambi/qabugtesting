@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker { image 'ruby-node:2-6' }
+    docker { image 'starefossen/ruby-node:2-6' }
   }
   environment {
      APP_PORT = 3000
