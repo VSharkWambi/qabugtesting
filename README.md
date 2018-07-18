@@ -2,7 +2,7 @@
 
 ## Installation
 
-* git clone git@github.com:skinnyjames/movietix.git
+* git clone git@github.com:skinnyjames/movietix.git && cd movietix
 * bundle install
 * rake db:create
 * rake db:migrate
