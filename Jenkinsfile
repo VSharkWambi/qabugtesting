@@ -15,10 +15,6 @@ pipeline {
         sh 'rake db:migrate'
         sh 'rake db:seed'
         sh "rails s -p ${env.APP_PORT}"
-      }
-    }
-    stage('Checkout Test Suite') {
-      steps {
         dir('test-suite') {
           git branch: 'snapshot-18', url: 'https://github.com/skinnyjames/cucumber-training.git' 
           sh 'bundle install'
