@@ -19,6 +19,7 @@ class SessionsController < ApplicationController
       user = User.find_or_create_from_auth_hash(auth_hash)
       session[:user_id] = user.id
       flash[:notice] = "Login successful!"
+      redirect_back_or_default account_url
     end
   end
 
