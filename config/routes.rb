@@ -3,6 +3,8 @@ Movietix::Application.routes.draw do
 
   resource :account, :controller => 'users'
 
+  get '/auth/:provider/callback', :to => 'sessions#create'
+
   get 'logout' => 'sessions#destroy', :as => 'logout'
   get 'login' => 'sessions#new', :as => 'login'
   get 'signup' => 'users#new', :as => 'signup'

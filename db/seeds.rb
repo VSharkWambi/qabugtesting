@@ -6,32 +6,42 @@
 #   cities = City.create([{ name => 'Chicago' }, { name => 'Copenhagen' }])
 #   Mayor.create(name => 'Emanuel', city => cities.first)
 
-admin = User.create(:login => "admin", :password => "P4ssw0rd", :password_confirmation => "P4ssw0rd")
+admin = User.create({:login => "admin", :password => "P4ssw0rd", :password_confirmation => "P4ssw0rd"})
 user1 = User.create(:login => "user1", :password => "P4ssw0rd", :password_confirmation => "P4ssw0rd")
 user2 = User.create(:login => "user2", :password => "P4ssw0rd", :password_confirmation => "P4ssw0rd")
 
-revengers_synopsis = "When a malicious entity with dubious motivations threatens Earth with epic CG explosions, \
-an unlikely band of heroes teams up to shatter previous box-office records."
+revengers_synopsis = <<-STRING
+When a malicious entity with dubious motivations threatens Earth with epic CG explosions, 
+an unlikely band of heroes teams up to shatter previous box-office records.
+STRING
 
-arachnidman_synopsis = "When Harry Horker got bitten by a radioactive spider, he had no idea that he'd grow \
-four more arms, six more eyes, and spin webbing from somewhere in his nether regions. And that because this \
-made him hideous rather than cool looking, he'd have to play the villain against the more visually appealing \
+arachnidman_synopsis = <<-STRING 
+When Harry Horker got bitten by a radioactive spider, he had no idea that he'd grow 
+four more arms, six more eyes, and spin webbing from somewhere in his nether regions. And that because this 
+made him hideous rather than cool looking, he'd have to play the villain against the more visually appealing 
 Geckoman in an epic role-reversal. But like Harry's uncle once said, 'With a great number of limbs comes great
-responsibility.'"
+responsibility.'
+STRING
 
-two_d_array_synopsis = "Ted thinks he has it all figured out, hacking his way through rubbish movie ticketing \
-sites all day long, right up until he hacks the wrong one and ends up being chased by goons in nice suits and \
-cool shades. That's when an idiot tells him that the real world isn't actually real, but is something called the \
-2D Array which is created by robots to fool humans into remaining perpetually asleep while these robots spoon \
-with the humans for warmth."
+two_d_array_synopsis = <<-STRING 
+Ted thinks he has it all figured out, hacking his way through rubbish movie ticketing 
+sites all day long, right up until he hacks the wrong one and ends up being chased by goons in nice suits and 
+cool shades. That's when an idiot tells him that the real world isn't actually real, but is something called the 
+2D Array which is created by robots to fool humans into remaining perpetually asleep while these robots spoon 
+with the humans for warmth.
+STRING
 
-hungry_games_synopsis = "Ripped off a Japanese story about kids having to eat bizarre sushi, this is a tale of a \
-dystopian future where colonies find the hungriest, craziest kids they can to enter into a hot dog eating contest. \
-The losers get turned into hot dogs to be used for future contests."
+hungry_games_synopsis = <<-STRING 
+ Ripped off a Japanese story about kids having to eat bizarre sushi, this is a tale of a 
+dystopian future where colonies find the hungriest, craziest kids they can to enter into a hot dog eating contest. 
+The losers get turned into hot dogs to be used for future contests.
+STRING
 
-game_of_chairs_synopsis = "In a world where a giant wall is all that separates the civilized world from beings that \
-raise the undead, where dragons are returning to burn kingdoms to ashes, where a decade-long winter threatens to wipe \
-out half of the population, the biggest concern is to show the audience as much nudity as physically possible."
+game_of_chairs_synopsis = <<-STRING 
+In a world where a giant wall is all that separates the civilized world from beings that 
+raise the undead, where dragons are returning to burn kingdoms to ashes, where a decade-long winter threatens to wipe 
+out half of the population, the biggest concern is to show the audience as much nudity as physically possible.
+STRING
 
 revengers = Movie.create(:name => "The Revengers", :running_time => 135, :rating => 2, :description => revengers_synopsis)
 arachnidman = Movie.create(:name => "Arachnidman", :running_time => 110, :rating => 3, :description => arachnidman_synopsis)
@@ -39,23 +49,31 @@ two_d_array = Movie.create(:name => "The 2D Array", :running_time => 120, :ratin
 hungry_games = Movie.create(:name => "The Hungry Games", :running_time => 90, :rating => 1, :description => hungry_games_synopsis)
 game_of_chairs = Movie.create(:name => "Game of Chairs", :running_time => 115, :rating => 4, :description => game_of_chairs_synopsis)
 
-abc_24_description = "This theater boasts 24 screens, stadium seating, and eye-watering concession prices. \
-It has an IMAX screen, although you can barely tell. It also shows 3D movies if you're in the mood for spending \
-more money in return for severely reduced image brightness and the opportunity to put some extra strain on your eyes. \
-Most of the new releases play here."
+abc_24_description = <<-STRING
+This theater boasts 24 screens, stadium seating, and eye-watering concession prices. 
+It has an IMAX screen, although you can barely tell. It also shows 3D movies if you're in the mood for spending 
+more money in return for severely reduced image brightness and the opportunity to put some extra strain on your eyes. 
+Most of the new releases play here.
+STRING
 
-rage_18_description = "Rage is a relatively new theater, using higher-quality projectors than most others. Their seats \
-aren't that comfortable, though, and the screens are quite small. Also there's frequently an automobile in the theater \
-lobby for some contest or other."
+rage_18_description = <<-STRING 
+Rage is a relatively new theater, using higher-quality projectors than most others. Their seats 
+aren't that comfortable, though, and the screens are quite small. Also there's frequently an automobile in the theater 
+lobby for some contest or other.
+STRING
 
-abc_30_description = "This theater has a weird concessions area where you gather everything and then check out at a \
-register the way you would at a cafeteria. But it has booze, which gives it an edge over others. It also has 30 \
-screens, one of which is an IMAX."
+abc_30_description = <<-STRING
+This theater has a weird concessions area where you gather everything and then check out at a 
+register the way you would at a cafeteria. But it has booze, which gives it an edge over others. It also has 30 
+screens, one of which is an IMAX.
+STRING
 
-studio_36_description = "A gathering place for hipsters and Big Leboswki fans, this theater is a relic from the 1700s, \
-when movies were just drawings on paper that people would quickly thumb through to create the illusion of animation. \
-It serves alcohol and has just one screen. For some reason, the floor of the theater tilts down as you get further \
-from the screen rather than up."
+studio_36_description = <<-STRING
+A gathering place for hipsters and Big Leboswki fans, this theater is a relic from the 1700s, 
+when movies were just drawings on paper that people would quickly thumb through to create the illusion of animation. 
+It serves alcohol and has just one screen. For some reason, the floor of the theater tilts down as you get further 
+from the screen rather than up.
+STRING
 
 abc_24 = Theater.create(:name => "ABC IMAX 24", :zip => 43210, :description => abc_24_description, :ticket_price => 9.00)
 rage_18 = Theater.create(:name => "Rage Motion Pictures 18", :zip => 43240, :description => rage_18_description, :ticket_price => 8.00)

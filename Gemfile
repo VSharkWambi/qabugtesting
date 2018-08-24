@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+gem 'omniauth-google-oauth2'
 gem 'bcrypt'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
