@@ -1,8 +1,8 @@
 # README
 ## Installation
 
-* git clone https://github.com/skinnyjames/movietix.git
-cd movietix
+* git clone https://github.com/vsharkwambi/qabugtesting.git
+* cd movietix
 * bundle install
 * rake db:create
 * rake db:migrate
