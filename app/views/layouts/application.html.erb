@@ -9,10 +9,10 @@
 <body>
 <header>
   <div class="login_container ui-corner-all ui-widget-content">
-    <% if !current_user %>
+    <% if !@current_user %>
       <%= link_to "Register", new_account_path %> <strong>|</strong>
       <%= link_to "Log In", login_path %> <strong>|</strong>
-      <a href="/auth/google_oauth2">Log In with Google</a><br>
+      <a href="#">Log In with Google</a><br>
     <% else %>
       <%= link_to "My Account", account_path %> |
       <%= link_to "Logout", logout_path %><br/>
