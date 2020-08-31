@@ -25,7 +25,7 @@
                          'sold_out'
                        end
                      %>">
-        <%= link_to showtime.time+' p.m.', showtime_path(showtime),
+        <%= link_to showtime.time+' p.m.', '#',
                     :id => 'showtime_'+movie_index.to_s+'_'+showtime_index.to_s %>
       </span>
     <% showtime_index += 1

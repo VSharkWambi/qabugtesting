@@ -5,6 +5,9 @@
 #
 #   cities = City.create([{ name => 'Chicago' }, { name => 'Copenhagen' }])
 #   Mayor.create(name => 'Emanuel', city => cities.first)
+require 'database_cleaner'
+
+DatabaseCleaner.clean_with(:truncation)
 
 admin = User.create({:login => "admin", :password => "P4ssw0rd", :password_confirmation => "P4ssw0rd"})
 user1 = User.create(:login => "user1", :password => "P4ssw0rd", :password_confirmation => "P4ssw0rd")
@@ -32,15 +35,13 @@ with the humans for warmth.
 STRING
 
 hungry_games_synopsis = <<-STRING 
- Ripped off a Japanese story about kids having to eat bizarre sushi, this is a tale of a 
+Ripped off a Japanese story about kids having to eat bizarre sushi, this is a tale of a 
 dystopian future where colonies find the hungriest, craziest kids they can to enter into a hot dog eating contest. 
 The losers get turned into hot dogs to be used for future contests.
 STRING
 
 game_of_chairs_synopsis = <<-STRING 
-In a world where a giant wall is all that separates the civilized world from beings that 
-raise the undead, where dragons are returning to burn kingdoms to ashes, where a decade-long winter threatens to wipe 
-out half of the population, the biggest concern is to show the audience as much nudity as physically possible.
+
 STRING
 
 revengers = Movie.create(:name => "The Revengers", :running_time => 135, :rating => 2, :description => revengers_synopsis)
@@ -112,6 +113,6 @@ s29  = Showtime.create(:movie => hungry_games, :theater => abc_30, :time => '5:0
 s30  = Showtime.create(:movie => hungry_games, :theater => abc_30, :time => '7:00', :seats_available => 300, :tickets_sold => 0)
 s31  = Showtime.create(:movie => hungry_games, :theater => abc_30, :time => '9:00', :seats_available => 0, :tickets_sold => 300)
 s32  = Showtime.create(:movie => two_d_array, :theater => studio_36, :time => '6:45', :seats_available => 300, :tickets_sold => 0)
-s33  = Showtime.create(:movie => game_of_chairs, :theater => studio_36, :time => '6:00', :seats_available => 300, :tickets_sold => 0)
-s34  = Showtime.create(:movie => game_of_chairs, :theater => studio_36, :time => '9:00', :seats_available => 300, :tickets_sold => 0)
+s33  = Showtime.create(:movie => game_of_chairs, :theater => studio_36, :time => '6:00', :seats_available => 300, :tickets_sold => 1)
+s34  = Showtime.create(:movie => game_of_chairs, :theater => studio_36, :time => '9:00', :seats_available => 300, :tickets_sold => 1)
 

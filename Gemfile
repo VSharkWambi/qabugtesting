@@ -9,6 +9,8 @@ gem 'coffee-script-source', '1.8.0'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+# Use to clean db before seeding
+gem 'database_cleaner', '1.8.5'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
